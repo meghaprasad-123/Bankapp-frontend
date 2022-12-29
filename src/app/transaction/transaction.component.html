@@ -1,0 +1,21 @@
+<h1>Transaction History</h1>
+<div class="table-box">
+<div class="table-row table-head">
+    <div class="table-cell">
+      <p>Type</p>
+    </div>
+    <div class="table-cell last-cell">
+        <p>Amount</p>
+    </div>
+</div>
+
+<div *ngFor="let i of transaction" class="table-row">
+    <div class="table-cell">
+      <p>{{i.Type}}</p>
+    </div>
+    <div class="table-cell last-cell">
+        <p>{{i.Amount}}</p>
+    </div>
+</div>
+
+</div>

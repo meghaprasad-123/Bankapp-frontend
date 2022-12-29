@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+
+#d1{
+    background-color: rgba(94, 116, 171, 0.4);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 674px;
+    height: 349px;
+}
+#w1{
+    background-color: rgb(94, 116, 171,0.4);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 674px;
+    height: 349px;
+}
+h2{
+    font-family: 'Zen Antique', serif;
+    font-size: 35px;
+}
+ 
+#m1{
+    width: 254px;
+    height: 200px;
+    margin-top: 30px;
+    margin-left: 44px;
+    border-radius: 53px;
+}
+#m2{
+    width: 254px;
+    height: 200px;
+    margin-top: 30px;
+    margin-left: 44px;
+    border-radius: 53px;
+}
+@media(max-width:400px){
+    #d1{
+        width:300px ;
+        margin-left: 10px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    #m1{
+         width: 100px;
+         height: 100px;
+         margin-left: 25px;
+    }
+    #w1{
+        width:300px;
+    }
+    #m2{
+        width: 100px;
+         height: 100px;
+         margin-left: 15px;
+    }
+}
+.welcome{
+    font-size: 60px;
+    color: whitesmoke;
+    font-family: 'Tangerine', cursive;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+.style1{
+    opacity: 0;
+}

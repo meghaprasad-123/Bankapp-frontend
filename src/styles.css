@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background: rgba(0,0,0,0.4)url(./assets/scott-graham-5fNmWej4tAA-unsplash.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+    background-position: center;
+}

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Shrikhand&display=swap');
+
+#r1{
+    background: rgba(43, 55, 58, 0.6);
+    margin-top: 80px;
+    width: 400px;
+}
+.hd2{
+    text-align: center;
+    font-family:'Josefin Sans', sans-serif ;
+    color: beige;
+    font-size:38px;
+    margin-top: 25px;
+}

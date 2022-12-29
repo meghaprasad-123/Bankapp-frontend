@@ -1,0 +1,31 @@
+<div class="row">
+    <div id="r1" class="container border border-dark ">
+        <h3 class="hd2">Register Here</h3>
+  
+        <form [formGroup]="registerForm" action="" (ngSubmit)="register()" >
+      <div class="mt-4 p-2">
+        <label style="color: rgb(50, 224, 237);font-size:17px;" for="">Account Number</label>
+        <input formControlName="acno" id="acc" name="Account number" type="text" class="form-control" >
+      </div>
+      <div class="text-danger" *ngIf="this.registerForm.get('acno')?.errors && this.registerForm.get('acno')?.touched">&nbsp;Invalid acno</div>
+  
+      <div class="mt-2 p-2">
+        <label style="color: rgb(50, 224, 237);font-size:17px;" for="">Username</label>
+        <input formControlName="uname" id="user" name="userName" type="text" class="form-control">
+      </div>
+      <div class="text-danger" *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname')?.touched">&nbsp;Invalid username</div>
+
+
+      <div class="mt-2 p-2">
+        <label style="color: rgb(50, 224, 237);font-size:17px;" for="">Password</label>
+        <input formControlName="pswd" id="psd" name="password" type="password" class="form-control">
+      </div>
+      <div class="text-danger" *ngIf="this.registerForm.get('pswd')?.errors && this.registerForm.get('pswd')?.touched">&nbsp;Invalid password</div>
+
+  
+      <div class="p-2 text-center">
+        <button type="submit"  style="margin-top: 28px;" class="btn btn-outline-info"><b>Register</b></button>
+      </div><br>
+    </form>
+    </div>
+  </div>

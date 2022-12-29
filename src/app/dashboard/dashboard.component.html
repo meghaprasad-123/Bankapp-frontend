@@ -1,0 +1,92 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+    </style>
+ <h5 style="color:rgb(248, 231, 231) ;">System date & time : {{sdate | date:'short'}}</h5>
+ 
+    <div class="p-3" style="text-align: end;">
+       <button (click)="logout()" type="submit" class="btn btn-danger">Logout</button>&nbsp;
+       <button (click)="delete()" type="submit" class="btn btn-dark">Delete</button>
+    </div>
+    
+ <!-- [ngClass]="acno? 'style1':''"   to remove that content -->
+ <h1 class="welcome" [ngClass]="acno? 'style1':''">Welcome {{user}}</h1>
+ <div class="text-center">
+    <button style="border-radius: 12px; background-color: black;"><a style="padding: 10px;text-decoration: none;color: rgb(214, 158, 16);" routerLink="/transaction">View transaction history</a>
+    </button>
+ </div>
+ 
+ <!-- child selector -->
+ <app-delete [item]="acno" (onCancel)="onCancel()" (onDelete)="onDelete($event)"></app-delete>
+ <!-- deposit form -->
+ 
+ <div class="row" [ngClass]="acno? 'style1':''">
+     <div id="d1" class="container border mt-5">
+        <h2 style="text-align: center;margin-top: 25px;"><b>Deposit Form</b></h2>
+ <div class="row">
+        <div class="col-6">
+             <form [formGroup]="depositForm" action="" (ngSubmit)="deposit()">
+                <div class="p-2 mt-3">
+                 <input formControlName="acno" type="text" name="acno" placeholder="Account no" class="form-control">
+                </div>
+                <div class="text-danger" *ngIf="this.depositForm.get('acno')?.errors && this.depositForm.get('acno')?.touched">&nbsp;Invalid acno</div>
+ 
+ 
+                <div class="p-2">
+                 <input formControlName="pswd" type="password" name="psd" placeholder="Password" class="form-control">
+                </div>
+                <div class="text-danger" *ngIf="this.depositForm.get('pswd')?.errors && this.depositForm.get('pswd')?.touched">&nbsp;Invalid Password</div>
+ 
+ 
+                <div class="p-2">
+                 <input formControlName="amount" type="text" name="amnt" placeholder="Amount" class="form-control">
+                </div>
+ 
+                <div class="p-2">
+                   <button type="submit" class="btn btn-dark form-control">Deposit</button>
+                </div>
+             </form>
+        </div>
+        <div class="col-6">
+           <img id="m1"  src="../../assets/deposit.jpg" alt="nthg">
+        </div>
+       </div><br>
+     </div>
+ </div><br>
+ 
+ <!-- withdrawal form -->
+ <div class="row" [ngClass]="acno? 'style1':''">
+    <div id="w1" class="container  border mt-5">
+       <h2 style="text-align: center;margin-top: 25px;"><b>Withrawal Form</b></h2>
+     <div class="row">
+       <div class="col-6">
+          <img id="m2" src="../../assets/withdrawal.jpg" alt="nthg">
+ 
+       </div>
+       <div class="col-6">
+          <form [formGroup]="withdrawForm" action="" (ngSubmit)="withdraw()">
+             <div class="p-2 mt-3">
+              <input formControlName="acno1" type="text" name="acno" placeholder="Account no" class="form-control">
+             </div>
+             <div class="text-danger" *ngIf="this.withdrawForm.get('acno1')?.errors && this.withdrawForm.get('acno1')?.touched">&nbsp;Invalid acno</div>
+ 
+ 
+             <div class="p-2">
+              <input formControlName="pswd1" type="password" name="psd" placeholder="Password" class="form-control">
+             </div>
+             <div class="text-danger" *ngIf="this.withdrawForm.get('pswd1')?.errors && this.withdrawForm.get('pswd1')?.touched">&nbsp;Invalid password</div>
+ 
+ 
+             <div class="p-2">
+              <input formControlName="amount1" type="text" name="amnt" placeholder="Amount" class="form-control">
+             </div>
+ 
+             <div class="p-2">
+                <button type="submit" class="btn btn-dark form-control">Withdraw</button>
+             </div>
+          </form>
+ 
+       </div>
+    </div><br>
+    </div>
+ </div><br>
+ 

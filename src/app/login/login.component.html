@@ -1,0 +1,29 @@
+
+<div><h3 style="font-family: 'Dancing Script', cursive;" class="text-light text-center fs-1 mt-4">{{aim}}</h3></div>
+
+<div class="row">
+  <div id="l1" class="container border border-dark ">
+      <h3 class="hd1">Login to your Account</h3>
+
+  <form [formGroup]="loginForm" action="" (ngSubmit)="login()">
+    <div class="mt-4 p-2">
+      <label style="color: rgb(240, 184, 16);font-size:17px;" for="">Account Number</label>
+      <input formControlName="acno" id="acc" name="accno" type="text" class="form-control" [placeholder]="data">
+    </div>
+    <div class="text-danger" *ngIf="this.loginForm.get('acno')?.errors && this.loginForm.get('acno')?.touched">&nbsp;Invalid acno</div>
+
+
+    <div class="mt-2 p-2">
+      <label style="color: rgb(240, 184, 16);font-size:17px;" for="">Password</label>
+      <input formControlName="pswd" id="psw" name="psd" type="password" class="form-control">
+    </div>
+    <div class="text-danger" *ngIf="this.loginForm.get('pswd')?.errors && this.loginForm.get('pswd')?.touched">&nbsp;Invalid password</div>
+
+
+    <div class="p-2">
+      <button type="submit"  style="margin-top: 28px;" class="btn btn-outline-warning form-control"><b>Login</b></button>
+    </div>
+  </form>
+    <p style="text-align: center;color:bisque;margin-top:30px">Not registered?<a routerLink="register">Register Here</a> </p>
+  </div>
+</div>
